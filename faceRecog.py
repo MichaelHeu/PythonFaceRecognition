@@ -15,7 +15,7 @@ while(True):
     faces = faceDetection.detectMultiScale(imgGrayScale,1.3,5)
     eyes = eyeDetection.detectMultiScale(imgGrayScale,1.3,5)
     for(x,y,width, height) in faces:
-        cv2.rectangle(img, (x,y), (x+width, y++height), (0,255,0),2)
+        cv2.rectangle(img, (x,y), (x+width, y+height), (0,255,0),2)
     for(x,y,width,height) in eyes:
         cv2.rectangle(img,(x,y),(x+width,y+height), (255,0,0), 1)
     cv2.imshow("Face", img)
